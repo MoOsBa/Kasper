@@ -1,0 +1,1060 @@
+/* start components */
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header {
+  text-align: center;
+  margin-bottom: 100px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 767px) {
+  .header {
+    width: 200px;
+    margin-bottom: 50px;
+  }
+  .header h2 {
+    font-size: 20px;
+  }
+  .header p {
+    font-size: 13px;
+  }
+}
+.header h2 {
+  position: relative;
+  font-size: 40px;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 70px;
+}
+.header h2::before {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 1px;
+  background-color: black;
+  left: 50%;
+  bottom: -30px;
+  transform: translateX(-50%);
+}
+.header h2::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: white;
+  left: 50%;
+  bottom: -40px;
+  transform: translateX(-50%);
+}
+.header p {
+  color: var(--font-color);
+  line-height: 2;
+}
+/* end components */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+:root {
+  --main-color: #19c8fa;
+  --font-color: #6d6d6d;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+a {
+  text-decoration: none;
+}
+/* start kasper */
+.kasper {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.kasper .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 99.73px;
+}
+.kasper .container::before {
+  position: absolute;
+  content: "";
+  width: calc(100% - 30px);
+  background-color: white;
+  height: 1px;
+  bottom: 0;
+  left: 15px;
+}
+.kasper .container ul {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .kasper .container ul {
+    display: none;
+  }
+  .links .toggle-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(43, 43, 43, 0.425);
+  }
+  .links .toggle-menu:hover + ul li a {
+    padding: 15px;
+  }
+}
+.links .toggle-menu {
+  font-size: 22px;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .links .toggle-menu {
+    display: none;
+  }
+}
+.kasper .container ul a {
+  display: block;
+  padding: 40px 15px;
+  color: white;
+  transition: 0.3s;
+}
+.kasper .container .links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}
+.kasper .container .links .search {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-left: 30px;
+  border-left: 1px solid white;
+}
+.kasper .container .search i {
+  position: absolute;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+.kasper .container ul a.active {
+  position: relative;
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  z-index: 4;
+}
+.kasper .container ul a:hover {
+  position: relative;
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  z-index: 4;
+}
+/* end kasper */
+/* start landing */
+.landing {
+  min-height: 100vh;
+  position: relative;
+  background-color: black;
+  background-image: url(../images/halloween-wallpaper-with-zombie-hand.jpg);
+  background-size: cover;
+}
+.landing::before {
+  content: "\f104";
+  font-weight: 900;
+  font-family: "font awesome 5 free";
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  transform: translateY(-50%);
+  left: 40px;
+  color: white;
+  z-index: 10;
+}
+@media (max-width: 767px) {
+  .landing::before,
+  .landing::after {
+    display: none;
+  }
+}
+.landing::after {
+  content: "\f105";
+  font-weight: 900;
+  font-family: "font awesome 5 free";
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  transform: translateY(-50%);
+  right: 40px;
+  color: white;
+  z-index: 10;
+}
+.landing .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.651);
+}
+.landing .text {
+  position: absolute;
+  padding: 50px;
+  color: white;
+  left: 0;
+  width: 50%;
+  background-color: #0f748fb3;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: flex-end;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .landing .text {
+    width: 100%;
+    padding: 30px;
+  }
+}
+.landing .text h3 {
+  font-weight: normal;
+  font-size: 32px;
+  margin-bottom: 20px;
+  margin-top: 0;
+
+  line-height: 1.7;
+}
+.landing .text p {
+  line-height: 1.7;
+  margin: 0;
+  font-size: 13px;
+}
+.landing .text .info {
+  max-width: 500px;
+  margin-left: 20px;
+}
+.landing .serc {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  bottom: 20px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+.landing .serc span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.landing .serc span.active {
+  background-color: var(--main-color);
+  margin-left: 10px;
+  margin-right: 10px;
+  border-color: var(--main-color);
+}
+/* end landing */
+/* start services */
+.services {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.services .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  row-gap: 60px;
+  column-gap: 40px;
+}
+@media (max-width: 767px) {
+  .services .services-content {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .services .services-content .content-one,
+  .services .services-content .content-two,
+  .services .services-content .content-three,
+  .services .services-content .content-four {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.services .services-content .content-one,
+.services .services-content .content-two,
+.services .services-content .content-three,
+.services .services-content .content-four {
+  display: flex;
+  justify-content: space-between;
+}
+.services .services-content h4 {
+  margin-top: 0;
+  color: var(--main-color);
+}
+.services .services-content p {
+  color: var(--font-color);
+  line-height: 1.8;
+}
+.services .services-content i {
+  margin-right: 40px;
+  font-size: 40px;
+}
+@media (max-width: 767px) {
+  .services .services-content i {
+    margin-right: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+/* end services */
+/* start our design */
+.our-design {
+  position: relative;
+  background-image: url(../images/halloween-wallpaper-with-zombie-hand.jpg);
+  background-size: contain;
+  overflow: hidden;
+  display: flex;
+  height: 600px;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.our-design .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.651);
+}
+.our-design img {
+  position: relative;
+  z-index: 2;
+  top: 200px;
+  left: 150px;
+}
+@media (max-width: 767px) {
+  .our-design img {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .our-design img {
+    display: none;
+  }
+}
+.our-design .info {
+  position: absolute;
+  padding: 50px;
+  color: white;
+  flex: 1;
+  right: 0;
+  width: 50%;
+  background-color: #0f748fb3;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 767px) {
+  .our-design .info {
+    width: fit-content;
+    padding: 50px 30px;
+  }
+}
+@media (max-width: 767px) {
+  .our-design .info h4 {
+    margin-bottom: 20px;
+  }
+}
+.our-design .info h4 {
+  font-size: 25px;
+  font-weight: normal;
+  margin-top: 0;
+}
+.our-design .info ul li {
+  margin-bottom: 20px;
+}
+.our-design .info ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f108";
+  font-weight: 900;
+  margin-right: 20px;
+  position: relative;
+  top: 1px;
+}
+/* end our design */
+/* start portfolio */
+.portfolio {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.portfolio ul {
+  display: flex;
+  justify-content: center;
+}
+.portfolio ul li {
+  padding: 10px;
+  margin-right: 10px;
+}
+.portfolio ul li.active {
+  color: white;
+  background-color: var(--main-color);
+}
+.portfolio .images-container {
+  margin-top: 50px;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio .images-container .box {
+  background-color: white;
+  overflow: hidden;
+  flex-basis: 25%;
+  position: relative;
+}
+@media (max-width: 991px) {
+  .portfolio .images-container .box {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .portfolio .images-container .box {
+    flex-basis: 100%;
+  }
+}
+.portfolio .images-container .box .images {
+  overflow: hidden;
+}
+.portfolio .images-container .box img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+.portfolio .images-container .box:hover img {
+  transform: rotate(4deg) scale(1.2);
+  filter: blur(2px);
+}
+.portfolio .images-container .box:hover .text {
+  bottom: 0;
+}
+.portfolio .images-container .box h5 {
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+.portfolio .images-container .box p {
+  font-weight: normal;
+  font-size: 13px;
+  margin: 0;
+  color: var(--main-color);
+}
+.portfolio .images-container .box .text {
+  padding: 5px;
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  transition: 0.3s;
+}
+.portfolio a {
+  display: block;
+  cursor: pointer;
+  width: fit-content;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px 15px;
+  border-radius: 6px;
+  color: white;
+  background-color: var(--main-color);
+}
+/* end portfolio */
+/* start video */
+.video {
+  position: relative;
+}
+.video video {
+  width: 100%;
+}
+
+.video::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.438);
+}
+.video .info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(15, 116, 143, 0.7);
+}
+
+.video .info h3 {
+  margin: 0 0 30px;
+  font-size: 25px;
+  font-weight: normal;
+}
+.video .info p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.video .info span {
+  display: block;
+  background-color: black;
+  padding: 10px 20px;
+  margin: auto;
+  width: fit-content;
+}
+/* end video */
+/* start about */
+.about {
+  padding-top: 100px;
+}
+.about .container .image-mob {
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+}
+.about .image-mob img {
+  margin-bottom: -120px;
+}
+@media (max-width: 767px) {
+  .about .image-mob img {
+    max-width: 100%;
+    margin-bottom: -60px;
+  }
+}
+@media (max-width: 991px) {
+  .about .image-mob img {
+    max-width: 100%;
+    margin-bottom: -105px;
+  }
+}
+
+/* end about */
+/* start stats */
+.stats {
+  background-image: url(../images/stats.png);
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+.stats::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.748);
+}
+.stats .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.stats .container .box {
+  padding: 50px;
+  color: white;
+  text-align: center;
+  position: relative;
+  flex-basis: 25%;
+  background-color: rgba(15, 116, 143, 0.7);
+}
+@media (max-width: 767px) {
+  .stats .container .box {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .stats .container .box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .stats .container .box {
+    flex-basis: 25%;
+  }
+}
+
+.stats .container .box span {
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.stats .container .box i {
+  background-color: black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 30px;
+}
+.stats .container .box p {
+  font-size: 13px;
+  margin: 0;
+}
+/* end stats */
+/* start skills-testimonials */
+.skills-testimonials {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.skills-testimonials .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (min-width: 992px) {
+  .skills-testimonials .container > div {
+    flex-basis: 45%;
+  }
+}
+.skills-testimonials .head {
+  text-align: center;
+}
+.skills-testimonials .head h3 {
+  font-weight: normal;
+  font-size: 20px;
+  margin: 0 auto 50px;
+}
+.skills-testimonials .head p {
+  color: #6d6d6d;
+}
+.skills-testimonials .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+.skills-testimonials .box .text {
+  border-bottom: 1px solid #777;
+}
+.skills-testimonials .box .text p {
+  line-height: 1.7;
+}
+.skills-testimonials .box img {
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+.skills-testimonials .box span {
+  color: #777;
+  display: block;
+  text-align: right;
+  padding-bottom: 10px;
+}
+.testimonials .bullets {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 50px;
+}
+.testimonials .bullets li {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #777;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.testimonials .bullets li.active {
+  background-color: var(--main-color);
+}
+.skills .progres {
+  position: relative;
+}
+.skills .head {
+  margin-bottom: 100px;
+}
+.skills .progres .prog {
+  position: absolute;
+  height: 25px;
+  width: 100%;
+  background-color: #eee;
+}
+.skills .progres h4 {
+  margin: 0 0 15px;
+  font-weight: normal;
+}
+.skills .progres .prog span {
+  display: block;
+  background-color: var(--main-color);
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.skills .progres .prog span::before {
+  color: white;
+  content: attr(data-progress);
+  position: absolute;
+  right: -18px;
+  top: -40px;
+  background-color: black;
+  border-radius: 4px;
+  padding: 4px 0;
+  width: 40px;
+  text-align: center;
+}
+.skills .progres .prog span::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 8px;
+  border-color: black transparent transparent transparent;
+  right: -7px;
+  top: -15px;
+}
+.skills .progres .prog-hold {
+  margin-bottom: 90px;
+}
+/* end skills-testimonials */
+/* start quote */
+.quote {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(../images/halloween-wallpaper-with-zombie-hand.jpg);
+  background-size: cover;
+  position: relative;
+}
+.quote::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.637);
+}
+.quote .text {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.quote .text q {
+  font-size: 40px;
+}
+.quote .text span {
+  display: block;
+  margin-top: 20px;
+  font-size: 20px;
+}
+/* end quote */
+/* start pricing */
+.pricing {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+.pricing .box {
+  background-color: #fcfcfc;
+  text-align: center;
+}
+.pricing .box .price {
+  padding: 40px 20px;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .box h3 {
+  font-weight: normal;
+  font-size: 20px;
+  margin-top: 0;
+}
+.pricing .box .price span {
+  font-size: 60px;
+  font-weight: bold;
+}
+.pricing .box .price span::before {
+  content: "$";
+  position: relative;
+  font-weight: normal;
+  font-size: 30px;
+  top: -40px;
+  left: -20px;
+}
+.pricing .box .price span::after {
+  position: relative;
+  content: '/MO';
+  font-size: 20px;
+  left: 20px;
+}
+.pricing .box ul li {
+  padding: 20px;
+  position: relative;
+}
+.pricing .box ul li:not(:last-child)::before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  background-color: var(--main-color);
+  width: 150px;
+
+}
+.pricing .box .footer {
+  border-top: 1px solid var(--main-color);
+  padding: 60px 40px;
+}
+.pricing .box .footer a {
+  padding: 20px;
+  border: 1px solid var(--main-color);
+}
+.pricing .info {
+  text-align: center;
+  margin: 30px auto 0;
+}
+.pricing .info p {
+  font-size: 20px;
+  color: #6d6d6d;
+}
+.pricing .info a {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px 40px;
+  background-color: var(--main-color);
+  border-radius: 6px;
+}
+/* end pricing */
+/* start email */
+.email-content {
+  background-image: url(../images/galaxy-3608029_1280.jpg);
+  background-size: cover ;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.email-content .container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .email-content .container {
+    flex-direction: column;
+  }
+  
+}
+.email-content form {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 500px;
+  max-width: 100%;
+}
+.email-content form input[type="email"] {
+  padding: 20px 20px 20px 60px;
+  background-color: transparent;
+  caret-color: var(--main-color);
+  outline: none;
+  border: none;
+  border: 2px solid white;
+  border-right: transparent;
+  width: calc(100% - 130px);
+}
+.email-content form input[type="email"]::placeholder {
+  color: white;
+}
+.email-content form::before {
+  content: "\f0e0";
+  font-family: "font awesome 5 free";
+  position: absolute;
+  font-weight: 900;
+  left: 15px;
+  top: 20px;
+  color: white;
+  font-size: 20px;  
+}
+.email-content form input[type="submit"] {
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+  border: 2px solid white;
+  border-left: transparent;
+  padding: 20px;
+  width: 130px;
+}
+.email-content p {
+  color: white;
+  line-height: 1.7;
+  margin-left: 50px;
+}
+@media (max-width: 991px) {
+  .email-content p {
+    margin-left: 0 ;
+  }
+}
+/* end email */
+/* start contact */
+.contact-us {
+  padding-top: 100px;
+  padding-bottom: 100px;
+} 
+.contact-us .form-aria {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  
+}
+@media (max-width: 767px) {
+  .contact-us .form-aria {
+    flex-direction: column-reverse;
+  }
+  .form-aria .box-text {
+    text-align: center;
+  }
+}
+.contact-us .form-aria form {
+  display: flex;
+  flex-direction: column;
+flex-basis: 70%;
+}
+.contact-us .form-aria form input {
+  border: 1px solid #eee;
+  padding: 20px;
+  margin-bottom: 30px;
+  outline: none;
+}
+.contact-us .form-aria form textarea {
+  resize: none;
+  min-height: 200px;
+  padding: 20px;
+  border: 1px solid #eee;
+  margin-bottom: 30px;
+  outline: none;
+}
+.contact-us .form-aria form input[type="submit"] {
+  width: fit-content;
+  padding: 20px;
+  color: white;
+  background-color: var(--main-color);
+  margin-left: auto;
+  cursor: pointer;
+}
+.form-aria .box-text {
+  flex-basis: 25%;
+}
+.form-aria .box-text .text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 84px;
+}
+.form-aria .box-text .text span {
+  display: block;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+.form-aria .box-text .text h4 {
+  margin: 0 0 40px;
+  font-weight: normal;
+  font-size: 20px;
+}
+/* end contact */
+.foot {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(../images/galaxy-3608029_1280.jpg);
+  background-size: cover;
+  position: relative;
+}
+.foot::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.644);
+  left: 0;
+  top: 0;
+}
+.foot .container {
+  position: relative;
+  text-align: center;
+}
+.foot .logo {
+  margin-bottom: 70px;
+}
+.foot .container h3 {
+  position: relative;
+  color: white;
+  margin: 0;
+  font-weight: normal;
+  font-size: 25px;
+}
+.foot .container h3::before {
+  position: absolute;
+  content: '';
+  width: 200px;
+  height: 1px;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+}
+.foot .container .social {
+  margin: 40px auto 80px; 
+  color: white;
+}
+.foot .container .social i {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.foot .container p {
+  color: white;
+}
+.foot .container p span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
